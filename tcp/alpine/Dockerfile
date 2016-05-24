@@ -1,6 +1,9 @@
 FROM nginx:1.9.15-alpine
 
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY default.conf /etc/nginx/conf.d/default.conf
+
+COPY STAR_aerisdev_com.pem /etc/ssl
+COPY star_aerisdev_keystore.pem /etc/ssl
 
 Expose 443/tcp
 
