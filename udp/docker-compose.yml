@@ -1,0 +1,10 @@
+nginx:
+  container_name: nginx-udp
+  image: aertrak/nginx-udp 
+  ports:
+   - "41234:41234/udp"
+  links:
+   - afOne:afOne
+   - afTwo:afTwo
+  volumes:
+   - /opt/logs/nginx/:/var/log/nginx/
